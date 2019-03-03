@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="全排列是一个很经典的问题 代码如下">
+<meta name="description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
 <meta property="og:type" content="article">
 <meta property="og:title" content="allrange_recursion">
 <meta property="og:url" content="http://yoursite.com/2019/02/27/allrange-recursion/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="全排列是一个很经典的问题 代码如下">
+<meta property="og:description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-27T03:58:34.767Z">
+<meta property="og:updated_time" content="2019-02-28T07:29:38.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="allrange_recursion">
-<meta name="twitter:description" content="全排列是一个很经典的问题 代码如下">
+<meta name="twitter:description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
 
 
 
@@ -320,7 +320,17 @@
 
       
         <p>全排列是一个很经典的问题</p>
+<p>一般分为两种解决方法</p>
 <p>代码如下</p>
+<p>非递归的思路如此</p>
+<h3 id="闲谈一下qsort的用法"><a href="#闲谈一下qsort的用法" class="headerlink" title="闲谈一下qsort的用法"></a>闲谈一下qsort的用法</h3><p>它需要一个比较函数</p>
+<p>qsort(num,100,sizeof(num[0]),cmp)</p>
+<p>1.对于int类型数组排序</p>
+<p>比较函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a,<span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> *(<span class="keyword">int</span> *)a-*(<span class="keyword">int</span> *)b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.对于double的比较函数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> * a, <span class="keyword">const</span> <span class="keyword">void</span> * b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">return</span>((*(<span class="keyword">double</span>*)a-*(<span class="keyword">double</span>*)b&gt;<span class="number">0</span>)?<span class="number">1</span>:<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>-</p>
 
       
     </div>
@@ -354,6 +364,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/28/computer-network/" rel="prev" title="computer_network">
+                computer_network <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -405,8 +419,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,14 +446,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -450,6 +491,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#闲谈一下qsort的用法"><span class="nav-number">1.</span> <span class="nav-text">闲谈一下qsort的用法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
