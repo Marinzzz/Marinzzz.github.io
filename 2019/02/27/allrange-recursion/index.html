@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
+<meta name="description" content="全排列是一个很经典的问题，有递归和非递归两种思路来解决它 1.递归思路思路： 一个排列 (1,2,3,4) 令P(1,2,3,4)为它的全排列 则有 P(1,2,3,4)=1,P(2,3,4)+2,P(1,3,4)+3,P(2,1,4)+4,P(2,3,1) 以此类推  代码如下 123456789101112131415161718void permutation1(char* str,int">
 <meta property="og:type" content="article">
 <meta property="og:title" content="allrange_recursion">
 <meta property="og:url" content="http://yoursite.com/2019/02/27/allrange-recursion/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
+<meta property="og:description" content="全排列是一个很经典的问题，有递归和非递归两种思路来解决它 1.递归思路思路： 一个排列 (1,2,3,4) 令P(1,2,3,4)为它的全排列 则有 P(1,2,3,4)=1,P(2,3,4)+2,P(1,3,4)+3,P(2,1,4)+4,P(2,3,1) 以此类推  代码如下 123456789101112131415161718void permutation1(char* str,int">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-28T07:29:38.291Z">
+<meta property="og:updated_time" content="2019-03-06T05:11:15.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="allrange_recursion">
-<meta name="twitter:description" content="全排列是一个很经典的问题 一般分为两种解决方法 代码如下 非递归的思路如此 闲谈一下qsort的用法它需要一个比较函数 qsort(num,100,sizeof(num[0]),cmp) 1.对于int类型数组排序 比较函数 1234int cmp(const void *a,const void *b)&amp;#123;return *(int *)a-*(int *)b;&amp;#125; 2.对于dou">
+<meta name="twitter:description" content="全排列是一个很经典的问题，有递归和非递归两种思路来解决它 1.递归思路思路： 一个排列 (1,2,3,4) 令P(1,2,3,4)为它的全排列 则有 P(1,2,3,4)=1,P(2,3,4)+2,P(1,3,4)+3,P(2,1,4)+4,P(2,3,1) 以此类推  代码如下 123456789101112131415161718void permutation1(char* str,int">
 
 
 
@@ -319,9 +319,18 @@
       
 
       
-        <p>全排列是一个很经典的问题</p>
-<p>一般分为两种解决方法</p>
+        <p>全排列是一个很经典的问题，有递归和非递归两种思路来解决它</p>
+<h3 id="1-递归思路"><a href="#1-递归思路" class="headerlink" title="1.递归思路"></a>1.递归思路</h3><h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><blockquote>
+<p>一个排列 (1,2,3,4)</p>
+<p>令P(1,2,3,4)为它的全排列</p>
+<p>则有</p>
+<p>P(1,2,3,4)=1,P(2,3,4)+2,P(1,3,4)+3,P(2,1,4)+4,P(2,3,1)</p>
+<p>以此类推</p>
+</blockquote>
 <p>代码如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">permutation1</span><span class="params">(<span class="keyword">char</span>* str,<span class="keyword">int</span> sbegin,<span class="keyword">int</span> send)</span>    <span class="comment">//全排列的非去重递归算法  </span></span></span><br><span class="line"><span class="function">    </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span>( sbegin == send) <span class="comment">//当 sbegin = send时输出  </span></span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= send; i++)   <span class="comment">//输出一个排列  </span></span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; str[i];  </span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = sbegin; i &lt;= send; i++) <span class="comment">//循环实现交换和sbegin + 1之后的全排列  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                swap(str[i],str[sbegin]);   <span class="comment">//把第i个和第sbegin进行交换  </span></span><br><span class="line">                permutation1(str,sbegin + <span class="number">1</span>,send);  </span><br><span class="line">                swap(str[i],str[sbegin]);   <span class="comment">//【注1】交换回来  </span></span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>但是当原排列出现重复字符时便无法解决问题，需要另加一个判断</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">permutation1</span><span class="params">(<span class="keyword">char</span>* str,<span class="keyword">int</span> sbegin,<span class="keyword">int</span> send)</span>    <span class="comment">//全排列的非去重递归算法  </span></span></span><br><span class="line"><span class="function">    </span>&#123;  </span><br><span class="line">        <span class="keyword">if</span>( sbegin == send) <span class="comment">//当 sbegin = send时输出  </span></span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt;= send; i++)   <span class="comment">//输出一个排列  </span></span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; str[i];  </span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">else</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = sbegin; i &lt;= send; i++) <span class="comment">//循环实现交换和sbegin + 1之后的全排列  </span></span><br><span class="line">            &#123;  </span><br><span class="line">            	<span class="keyword">if</span>(str[i]==str[sbegin])</span><br><span class="line">            	<span class="keyword">continue</span>;<span class="comment">//存在重复元素</span></span><br><span class="line">                swap(str[i],str[sbegin]);   <span class="comment">//把第i个和第sbegin进行交换  </span></span><br><span class="line">                permutation1(str,sbegin + <span class="number">1</span>,send);  </span><br><span class="line">                swap(str[i],str[sbegin]);   <span class="comment">//【注1】交换回来  </span></span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>非递归的思路如此</p>
 <h3 id="闲谈一下qsort的用法"><a href="#闲谈一下qsort的用法" class="headerlink" title="闲谈一下qsort的用法"></a>闲谈一下qsort的用法</h3><p>它需要一个比较函数</p>
 <p>qsort(num,100,sizeof(num[0]),cmp)</p>
@@ -446,7 +455,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -457,7 +466,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -468,7 +477,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -501,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#闲谈一下qsort的用法"><span class="nav-number">1.</span> <span class="nav-text">闲谈一下qsort的用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-递归思路"><span class="nav-number">1.</span> <span class="nav-text">1.递归思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路："><span class="nav-number">1.1.</span> <span class="nav-text">思路：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闲谈一下qsort的用法"><span class="nav-number">2.</span> <span class="nav-text">闲谈一下qsort的用法</span></a></li></ol></div>
             
 
           </div>
