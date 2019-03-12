@@ -98,25 +98,24 @@
 
 
 
-  <meta name="description" content="两种体系结构 OSI/ISO TCP/IP">
-<meta name="keywords" content="计算机网络">
+  <meta name="description" content="感觉递归的题见得挺多的，陆续记录一下吧 1.n中取m个球123456789int f(int m,int n)&amp;#123;	if(n&amp;lt;m)	return 0;	if(n==m)	return 1;	if(m==0)	return 0;&amp;#125; 2.求n个元素的全排列3.两个串中最大公共子序列的长度123456789int f(char* s1,char *s2)&amp;#123;	if(str">
 <meta property="og:type" content="article">
-<meta property="og:title" content="computer_network">
-<meta property="og:url" content="http://yoursite.com/2019/02/28/computer-network/index.html">
+<meta property="og:title" content="recursion">
+<meta property="og:url" content="http://yoursite.com/2019/03/10/recursion/index.html">
 <meta property="og:site_name" content="Marinata">
-<meta property="og:description" content="两种体系结构 OSI/ISO TCP/IP">
+<meta property="og:description" content="感觉递归的题见得挺多的，陆续记录一下吧 1.n中取m个球123456789int f(int m,int n)&amp;#123;	if(n&amp;lt;m)	return 0;	if(n==m)	return 1;	if(m==0)	return 0;&amp;#125; 2.求n个元素的全排列3.两个串中最大公共子序列的长度123456789int f(char* s1,char *s2)&amp;#123;	if(str">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-28T03:57:09.402Z">
+<meta property="og:updated_time" content="2019-03-10T03:27:14.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="computer_network">
-<meta name="twitter:description" content="两种体系结构 OSI/ISO TCP/IP">
+<meta name="twitter:title" content="recursion">
+<meta name="twitter:description" content="感觉递归的题见得挺多的，陆续记录一下吧 1.n中取m个球123456789int f(int m,int n)&amp;#123;	if(n&amp;lt;m)	return 0;	if(n==m)	return 1;	if(m==0)	return 0;&amp;#125; 2.求n个元素的全排列3.两个串中最大公共子序列的长度123456789int f(char* s1,char *s2)&amp;#123;	if(str">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/28/computer-network/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/10/recursion/">
 
 
 
@@ -126,7 +125,7 @@
   };
 </script>
 
-  <title>computer_network | Marinata</title>
+  <title>recursion | Marinata</title>
   
 
 
@@ -325,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/28/computer-network/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/recursion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Marinata">
@@ -342,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">computer_network
+          <h1 class="post-title" itemprop="name headline">recursion
 
               
             
@@ -368,7 +367,7 @@
                 
               
 
-              <time title="创建时间：2019-02-28 11:50:05 / 修改时间：11:57:09" itemprop="dateCreated datePublished" datetime="2019-02-28T11:50:05+08:00">2019-02-28</time>
+              <time title="创建时间：2019-03-10 11:24:57 / 修改时间：11:27:14" itemprop="dateCreated datePublished" datetime="2019-03-10T11:24:57+08:00">2019-03-10</time>
             
 
             
@@ -390,7 +389,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/考研复试/" itemprop="url" rel="index"><span itemprop="name">考研复试</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a></span>
 
                 
                 
@@ -425,11 +424,10 @@
       
 
       
-        <h3 id="两种体系结构"><a href="#两种体系结构" class="headerlink" title="两种体系结构"></a>两种体系结构</h3><ol>
-<li>OSI/ISO</li>
-<li>TCP/IP</li>
-</ol>
-
+        <p>感觉递归的题见得挺多的，陆续记录一下吧</p>
+<h4 id="1-n中取m个球"><a href="#1-n中取m个球" class="headerlink" title="1.n中取m个球"></a>1.n中取m个球</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;m)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(n==m)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(m==<span class="number">0</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-求n个元素的全排列"><a href="#2-求n个元素的全排列" class="headerlink" title="2.求n个元素的全排列"></a>2.求n个元素的全排列</h4><h4 id="3-两个串中最大公共子序列的长度"><a href="#3-两个串中最大公共子序列的长度" class="headerlink" title="3.两个串中最大公共子序列的长度"></a>3.两个串中最大公共子序列的长度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int f(char* s1,char *s2)</span><br><span class="line">&#123;</span><br><span class="line">	if(strlen(s1)==0||strlen(s2)==0)</span><br><span class="line">	return 0</span><br><span class="line">	if(s1[0]==s2[0])</span><br><span class="line">	return 1+f(s1+1,s2+1);</span><br><span class="line">	else</span><br><span class="line">	return f(s1+1,s2)&gt;f(s1,s2+1)?</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-汉诺塔问题"><a href="#4-汉诺塔问题" class="headerlink" title="4.汉诺塔问题"></a>4.汉诺塔问题</h4><h4 id="5-超大的数字和小数的四舍五入"><a href="#5-超大的数字和小数的四舍五入" class="headerlink" title="5.超大的数字和小数的四舍五入"></a>5.超大的数字和小数的四舍五入</h4>
       
     </div>
 
@@ -450,12 +448,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/计算机网络/" rel="tag"># 计算机网络</a>
-          
-        </div>
-      
 
       
       
@@ -465,8 +457,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/27/allrange-recursion/" rel="next" title="allrange_recursion">
-                <i class="fa fa-chevron-left"></i> allrange_recursion
+              <a href="/2019/03/08/stl-string/" rel="next" title="stl_string">
+                <i class="fa fa-chevron-left"></i> stl_string
               </a>
             
           </div>
@@ -475,8 +467,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/01/the-pointer-of-C-language/" rel="prev" title="the pointer of C_language">
-                the pointer of C_language <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/10/linked-list/" rel="prev" title="linked-list">
+                linked-list <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -648,7 +640,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#两种体系结构"><span class="nav-number">1.</span> <span class="nav-text">两种体系结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-n中取m个球"><span class="nav-number">1.</span> <span class="nav-text">1.n中取m个球</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-求n个元素的全排列"><span class="nav-number">2.</span> <span class="nav-text">2.求n个元素的全排列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-两个串中最大公共子序列的长度"><span class="nav-number">3.</span> <span class="nav-text">3.两个串中最大公共子序列的长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-汉诺塔问题"><span class="nav-number">4.</span> <span class="nav-text">4.汉诺塔问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-超大的数字和小数的四舍五入"><span class="nav-number">5.</span> <span class="nav-text">5.超大的数字和小数的四舍五入</span></a></li></ol></div>
             
 
           </div>
