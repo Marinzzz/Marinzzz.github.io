@@ -98,21 +98,25 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="pycharm">
-<meta property="og:url" content="http://yoursite.com/2019/03/25/pycharm/index.html">
+  <meta name="description" content="1.shell中的变量1.1 定义1.1.1 变量名和等号之间不能有空格 1.1.2 只能使用英文字母，数字，下划线，首字符不能是数字 1.1.3 不能使用标点符号 1.1.3 不能使用关键字 1username=“marinata&quot; 1.2 调用调用时，要加上美刀符，变量名最好使用花括号圈起来 1echo $&amp;#123;username&amp;#125; shell中的循环 2.shell中的字符串2">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell_learning">
+<meta property="og:url" content="http://yoursite.com/2019/04/09/shell-learning/index.html">
 <meta property="og:site_name" content="Marinata">
+<meta property="og:description" content="1.shell中的变量1.1 定义1.1.1 变量名和等号之间不能有空格 1.1.2 只能使用英文字母，数字，下划线，首字符不能是数字 1.1.3 不能使用标点符号 1.1.3 不能使用关键字 1username=“marinata&quot; 1.2 调用调用时，要加上美刀符，变量名最好使用花括号圈起来 1echo $&amp;#123;username&amp;#125; shell中的循环 2.shell中的字符串2">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-25T07:20:34.901Z">
+<meta property="og:updated_time" content="2019-04-09T06:58:53.506Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pycharm">
+<meta name="twitter:title" content="shell_learning">
+<meta name="twitter:description" content="1.shell中的变量1.1 定义1.1.1 变量名和等号之间不能有空格 1.1.2 只能使用英文字母，数字，下划线，首字符不能是数字 1.1.3 不能使用标点符号 1.1.3 不能使用关键字 1username=“marinata&quot; 1.2 调用调用时，要加上美刀符，变量名最好使用花括号圈起来 1echo $&amp;#123;username&amp;#125; shell中的循环 2.shell中的字符串2">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/25/pycharm/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/09/shell-learning/">
 
 
 
@@ -122,7 +126,7 @@
   };
 </script>
 
-  <title>pycharm | Marinata</title>
+  <title>shell_learning | Marinata</title>
   
 
 
@@ -321,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/25/pycharm/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/shell-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Marinata">
@@ -338,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">pycharm
+          <h1 class="post-title" itemprop="name headline">shell_learning
 
               
             
@@ -364,12 +368,34 @@
                 
               
 
-              <time title="创建时间：2019-03-25 15:20:34" itemprop="dateCreated datePublished" datetime="2019-03-25T15:20:34+08:00">2019-03-25</time>
+              <time title="创建时间：2019-04-09 14:34:30 / 修改时间：14:58:53" itemprop="dateCreated datePublished" datetime="2019-04-09T14:34:30+08:00">2019-04-09</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -399,7 +425,25 @@
       
 
       
-        
+        <h3 id="1-shell中的变量"><a href="#1-shell中的变量" class="headerlink" title="1.shell中的变量"></a>1.shell中的变量</h3><h4 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h4><p>1.1.1 变量名和等号之间不能有空格</p>
+<p>1.1.2 只能使用英文字母，数字，下划线，首字符不能是数字</p>
+<p>1.1.3 不能使用标点符号</p>
+<p>1.1.3 不能使用关键字</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username=“marinata<span class="string">"</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-2-调用"><a href="#1-2-调用" class="headerlink" title="1.2 调用"></a>1.2 调用</h4><p>调用时，要加上美刀符，变量名最好使用花括号圈起来</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;username&#125;</span></span><br></pre></td></tr></table></figure>
+<p>shell中的循环</p>
+<h3 id="2-shell中的字符串"><a href="#2-shell中的字符串" class="headerlink" title="2.shell中的字符串"></a>2.shell中的字符串</h3><h4 id="2-1-单引号"><a href="#2-1-单引号" class="headerlink" title="2.1 单引号"></a>2.1 单引号</h4><p>单引号中的变量无效</p>
+<h4 id="2-2-双引号"><a href="#2-2-双引号" class="headerlink" title="2.2 双引号"></a>2.2 双引号</h4><h4 id="2-3-拼接字符串"><a href="#2-3-拼接字符串" class="headerlink" title="2.3 拼接字符串"></a>2.3 拼接字符串</h4><h4 id="2-4-获取字符串长度"><a href="#2-4-获取字符串长度" class="headerlink" title="2.4 获取字符串长度"></a>2.4 获取字符串长度</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string=<span class="string">"asdad"</span>	</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;#tring&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-5-提取子字符串"><a href="#2-5-提取子字符串" class="headerlink" title="2.5 提取子字符串"></a>2.5 提取子字符串</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string=<span class="string">"asdad"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;string:1:4&#125;</span>	<span class="comment">#截取从第二位起后的4个字符</span></span><br></pre></td></tr></table></figure>
+<p>2.6 查找子字符串</p>
+<h3 id="3-shell中的数组"><a href="#3-shell中的数组" class="headerlink" title="3.shell中的数组"></a>3.shell中的数组</h3><p>不支持多维数组。</p>
+<p>下标从零开始</p>
+<h4 id="3-1-数组定义"><a href="#3-1-数组定义" class="headerlink" title="3.1 数组定义"></a>3.1 数组定义</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array_name=(value1,value2,value3)</span><br></pre></td></tr></table></figure>
+<h4 id="3-2-读取数组"><a href="#3-2-读取数组" class="headerlink" title="3.2 读取数组"></a>3.2 读取数组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;array_name[0]&#125;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;array_name[@]&#125;</span><span class="comment">#获取数组里的所有元素</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-3-获取数组长度"><a href="#3-3-获取数组长度" class="headerlink" title="3.3 获取数组长度"></a>3.3 获取数组长度</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">length=<span class="variable">$&#123;#array_name[@]&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-shell中的注释"><a href="#4-shell中的注释" class="headerlink" title="4.shell中的注释"></a>4.shell中的注释</h3><p>使用’#’号表示注释</p>
+
       
     </div>
 
@@ -420,6 +464,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
+          
+        </div>
+      
 
       
       
@@ -429,8 +479,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/23/word2vector/" rel="next" title="word2vector">
-                <i class="fa fa-chevron-left"></i> word2vector
+              <a href="/2019/04/06/linux-kernel/" rel="next" title="linux_kernel">
+                <i class="fa fa-chevron-left"></i> linux_kernel
               </a>
             
           </div>
@@ -439,8 +489,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/25/tensorflow/" rel="prev" title="tensorflow">
-                tensorflow <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/10/notebook/" rel="prev" title="notebook">
+                notebook <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -485,8 +535,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -602,6 +661,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-shell中的变量"><span class="nav-number">1.</span> <span class="nav-text">1.shell中的变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-定义"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-调用"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 调用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-shell中的字符串"><span class="nav-number">2.</span> <span class="nav-text">2.shell中的字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-单引号"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 单引号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-双引号"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 双引号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-拼接字符串"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 拼接字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-获取字符串长度"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 获取字符串长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-提取子字符串"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 提取子字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-shell中的数组"><span class="nav-number">3.</span> <span class="nav-text">3.shell中的数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-数组定义"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 数组定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-读取数组"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 读取数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-获取数组长度"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 获取数组长度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-shell中的注释"><span class="nav-number">4.</span> <span class="nav-text">4.shell中的注释</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
