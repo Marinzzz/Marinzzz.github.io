@@ -98,24 +98,24 @@
 
 
 
-  <meta name="description" content="详细记录一下python里面的字典的用法，有时候来个嵌套字典挺让我头大的 字典添加元素 dict[‘name’]=”Marinata” 判断一个字典有没有某个键 1if key in dict: 获取字典中数值最大的那个键 1key_name = max(my_dict, key=my_dict.get) 关于字典的排序 字典遍历 12for key in dic:	print(key+&apos;:&apos;+d">
+  <meta name="description" content="1if __name__==&quot;__main__&quot;: #这条语句的作用    一个python文件一般有两种使用方法 一种是作为脚本直接执行 第二种是被其他脚本import调用执行 当a脚本调用b脚本时，b脚本中 123&amp;gt; if __name__==&quot;__main__&quot;:&amp;gt; 	...&amp;gt;   后面的语句是不会执行的 这样就又可以调用b脚本中的函数 而又不发挥b脚本的作用而避免造成冲">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dict_in_python">
-<meta property="og:url" content="http://yoursite.com/2019/03/13/dict-in-python/index.html">
+<meta property="og:title" content="tricks_of_python">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/tricks-of-python/index.html">
 <meta property="og:site_name" content="Marinata">
-<meta property="og:description" content="详细记录一下python里面的字典的用法，有时候来个嵌套字典挺让我头大的 字典添加元素 dict[‘name’]=”Marinata” 判断一个字典有没有某个键 1if key in dict: 获取字典中数值最大的那个键 1key_name = max(my_dict, key=my_dict.get) 关于字典的排序 字典遍历 12for key in dic:	print(key+&apos;:&apos;+d">
+<meta property="og:description" content="1if __name__==&quot;__main__&quot;: #这条语句的作用    一个python文件一般有两种使用方法 一种是作为脚本直接执行 第二种是被其他脚本import调用执行 当a脚本调用b脚本时，b脚本中 123&amp;gt; if __name__==&quot;__main__&quot;:&amp;gt; 	...&amp;gt;   后面的语句是不会执行的 这样就又可以调用b脚本中的函数 而又不发挥b脚本的作用而避免造成冲">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-15T08:40:30.434Z">
+<meta property="og:updated_time" content="2019-04-17T09:27:52.308Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dict_in_python">
-<meta name="twitter:description" content="详细记录一下python里面的字典的用法，有时候来个嵌套字典挺让我头大的 字典添加元素 dict[‘name’]=”Marinata” 判断一个字典有没有某个键 1if key in dict: 获取字典中数值最大的那个键 1key_name = max(my_dict, key=my_dict.get) 关于字典的排序 字典遍历 12for key in dic:	print(key+&apos;:&apos;+d">
+<meta name="twitter:title" content="tricks_of_python">
+<meta name="twitter:description" content="1if __name__==&quot;__main__&quot;: #这条语句的作用    一个python文件一般有两种使用方法 一种是作为脚本直接执行 第二种是被其他脚本import调用执行 当a脚本调用b脚本时，b脚本中 123&amp;gt; if __name__==&quot;__main__&quot;:&amp;gt; 	...&amp;gt;   后面的语句是不会执行的 这样就又可以调用b脚本中的函数 而又不发挥b脚本的作用而避免造成冲">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/13/dict-in-python/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/17/tricks-of-python/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>dict_in_python | Marinata</title>
+  <title>tricks_of_python | Marinata</title>
   
 
 
@@ -324,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/13/dict-in-python/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/tricks-of-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Marinata">
@@ -341,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">dict_in_python
+          <h1 class="post-title" itemprop="name headline">tricks_of_python
 
               
             
@@ -367,24 +367,12 @@
                 
               
 
-              <time title="创建时间：2019-03-13 16:06:25" itemprop="dateCreated datePublished" datetime="2019-03-13T16:06:25+08:00">2019-03-13</time>
+              <time title="创建时间：2019-04-17 16:22:55 / 修改时间：17:27:52" itemprop="dateCreated datePublished" datetime="2019-04-17T16:22:55+08:00">2019-04-17</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-15 16:40:30" itemprop="dateModified" datetime="2019-04-15T16:40:30+08:00">2019-04-15</time>
               
             
           </span>
@@ -436,20 +424,23 @@
       
 
       
-        <p>详细记录一下python里面的字典的用法，有时候来个嵌套字典挺让我头大的</p>
-<p>字典添加元素</p>
-<p>dict[‘name’]=”Marinata”</p>
-<p>判断一个字典有没有某个键</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key <span class="keyword">in</span> dict:</span><br></pre></td></tr></table></figure>
-<p>获取字典中数值最大的那个键</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">key_name = max(my_dict, key=my_dict.get)</span><br></pre></td></tr></table></figure>
-<p>关于字典的排序</p>
-<p>字典遍历</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dic:</span><br><span class="line">	print(key+<span class="string">':'</span>+dic[key])</span><br></pre></td></tr></table></figure>
-<p>字典按照键值排序</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1=&#123;<span class="string">'a'</span>:<span class="number">2</span>,<span class="string">'e'</span>:<span class="number">3</span>,<span class="string">'f'</span>:<span class="number">8</span>,<span class="string">'d'</span>:<span class="number">4</span>&#125;</span><br><span class="line">list1= sorted(dict1.items(),key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>])</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure>
-<p>BTW python不换行输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a,end=&quot;&quot;)</span><br></pre></td></tr></table></figure>
+        <ol>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>: <span class="comment">#这条语句的作用</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>一个python文件一般有两种使用方法</p>
+<p>一种是作为脚本直接执行</p>
+<p>第二种是被其他脚本import调用执行</p>
+<p>当a脚本调用b脚本时，b脚本中</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">&gt; 	...</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>后面的语句是不会执行的</p>
+<p>这样就又可以调用b脚本中的函数</p>
+<p>而又不发挥b脚本的作用而避免造成冲突</p>
+<p>个人感觉这样写代码也比较清楚，别人一眼能看到主干</p>
+</blockquote>
 
       
     </div>
@@ -480,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/12/碎碎念/" rel="next" title="碎碎念">
-                <i class="fa fa-chevron-left"></i> 碎碎念
+              <a href="/2019/04/12/string-in-python/" rel="next" title="string_in_python">
+                <i class="fa fa-chevron-left"></i> string_in_python
               </a>
             
           </div>
@@ -490,8 +481,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/14/stl-vector/" rel="prev" title="stl_vector">
-                stl_vector <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/17/spider-in-python/" rel="prev" title="spider_in_python">
+                spider_in_python <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
