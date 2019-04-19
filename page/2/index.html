@@ -321,6 +321,462 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/list-in-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Marinata">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marinata">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/04/list-in-python/" class="post-title-link" itemprop="url">list in python</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-04 10:00:22" itemprop="dateCreated datePublished" datetime="2019-04-04T10:00:22+08:00">2019-04-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-06 08:13:50" itemprop="dateModified" datetime="2019-04-06T08:13:50+08:00">2019-04-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>去除列表的最后一个</p>
+<p>list[:-1]</p>
+<p>计数</p>
+<p>list.count(obj)</p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>1.列表中嵌套字典，根据字典的某个键值排序</p>
+<p>newlist=sorted(list,key=lamda x: x[‘value’,reverse=True])</p>
+<p>举例</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">rank=[]</span><br><span class="line">temp=&#123;<span class="string">'api'</span>:<span class="string">'a'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">2</span>&#125;</span><br><span class="line">rank.append(temp)</span><br><span class="line">temp1=&#123;<span class="string">'api'</span>:<span class="string">'b'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">43</span>&#125;</span><br><span class="line">rank.append(temp1)</span><br><span class="line">temp2=&#123;<span class="string">'api'</span>:<span class="string">'c'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">1</span>&#125;</span><br><span class="line">rank.append(temp2)</span><br><span class="line">temp3=&#123;<span class="string">'api'</span>:<span class="string">'d'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">242</span>&#125;</span><br><span class="line">rank.append(temp3)</span><br><span class="line">temp4=&#123;<span class="string">'api'</span>:<span class="string">'e'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">23</span>&#125;</span><br><span class="line">rank.append(temp4)</span><br><span class="line">temp5=&#123;<span class="string">'api'</span>:<span class="string">'f'</span>,<span class="string">'tf-idf-sum'</span>:<span class="number">211</span>&#125;</span><br><span class="line">rank.append(temp5)</span><br><span class="line">rank=sorted(rank,key=<span class="keyword">lambda</span> x: x[<span class="string">'tf-idf-sum'</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> rank:</span><br><span class="line">    print(i[<span class="string">'api'</span>])</span><br><span class="line">    print(i[<span class="string">'tf-idf-sum'</span>])</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/25/tensorflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Marinata">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marinata">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/25/tensorflow/" class="post-title-link" itemprop="url">tensorflow</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-25 15:20:41" itemprop="dateCreated datePublished" datetime="2019-03-25T15:20:41+08:00">2019-03-25</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/25/pycharm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Marinata">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marinata">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/25/pycharm/" class="post-title-link" itemprop="url">pycharm</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-25 15:20:34" itemprop="dateCreated datePublished" datetime="2019-03-25T15:20:34+08:00">2019-03-25</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/word2vector/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -992,7 +1448,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-15 16:40:30" itemprop="dateModified" datetime="2019-04-15T16:40:30+08:00">2019-04-15</time>
+                <time title="修改时间：2019-04-18 18:30:24" itemprop="dateModified" datetime="2019-04-18T18:30:24+08:00">2019-04-18</time>
               
             
           </span>
@@ -1058,6 +1514,8 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> dic:</span><br><span class="line">	print(key+<span class="string">':'</span>+dic[key])</span><br></pre></td></tr></table></figure>
 <p>字典按照键值排序</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1=&#123;<span class="string">'a'</span>:<span class="number">2</span>,<span class="string">'e'</span>:<span class="number">3</span>,<span class="string">'f'</span>:<span class="number">8</span>,<span class="string">'d'</span>:<span class="number">4</span>&#125;</span><br><span class="line">list1= sorted(dict1.items(),key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>])</span><br><span class="line">print(list1)</span><br></pre></td></tr></table></figure>
+<p>字典伪切片</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dict_slice</span><span class="params">(ori_dict, start, end)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    字典类切片</span></span><br><span class="line"><span class="string">    :param ori_dict: 字典</span></span><br><span class="line"><span class="string">    :param start: 起始</span></span><br><span class="line"><span class="string">    :param end: 终点</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    slice_dict = &#123;k: ori_dict[k] <span class="keyword">for</span> k <span class="keyword">in</span> list(ori_dict.keys())[start:end]&#125;</span><br><span class="line">    <span class="keyword">return</span> slice_dict</span><br></pre></td></tr></table></figure>
 <p>BTW python不换行输出</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(a,end=&quot;&quot;)</span><br></pre></td></tr></table></figure>
 
@@ -1357,7 +1815,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-03 19:06:26" itemprop="dateModified" datetime="2019-04-03T19:06:26+08:00">2019-04-03</time>
+                <time title="修改时间：2019-04-18 13:44:37" itemprop="dateModified" datetime="2019-04-18T13:44:37+08:00">2019-04-18</time>
               
             
           </span>
@@ -1412,9 +1870,11 @@
         
           
             <p>记录一下python中的os模块+json module</p>
-<p>1.列出该文件夹下的所有文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.listdir()</span><br></pre></td></tr></table></figure>
-<p>2.获取当前目录</p>
+<h3 id="1-列出该文件夹下的所有文件"><a href="#1-列出该文件夹下的所有文件" class="headerlink" title="1.列出该文件夹下的所有文件"></a>1.列出该文件夹下的所有文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.listdir()</span><br></pre></td></tr></table></figure>
+<h3 id="2-获取当前目录"><a href="#2-获取当前目录" class="headerlink" title="2.获取当前目录"></a>2.获取当前目录</h3><h3 id="3-python创建目录"><a href="#3-python创建目录" class="headerlink" title="3.python创建目录"></a>3.python创建目录</h3><p>os.mkdir(path)</p>
+<p>例如path=”/Users/marinata/Desktop/test”</p>
+<p>os.mkdirs()</p>
+<h3 id="4-python判断目录是否存在"><a href="#4-python判断目录是否存在" class="headerlink" title="4.python判断目录是否存在"></a>4.python判断目录是否存在</h3><p>os.path.exists(path)</p>
 <p>关于json模块</p>
 <p>json在我心中感觉就是python中的字典</p>
 
@@ -1634,552 +2094,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/linked-list/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Marinata">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marinata">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/10/linked-list/" class="post-title-link" itemprop="url">linked-list</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-10 20:22:38" itemprop="dateCreated datePublished" datetime="2019-03-10T20:22:38+08:00">2019-03-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-17 08:50:31" itemprop="dateModified" datetime="2019-03-17T08:50:31+08:00">2019-03-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C语言/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/10/recursion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Marinata">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marinata">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/10/recursion/" class="post-title-link" itemprop="url">recursion</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-10 11:24:57" itemprop="dateCreated datePublished" datetime="2019-03-10T11:24:57+08:00">2019-03-10</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-17 08:49:25" itemprop="dateModified" datetime="2019-03-17T08:49:25+08:00">2019-03-17</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/algorithm/" itemprop="url" rel="index"><span itemprop="name">algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>感觉递归的题见得挺多的，陆续记录一下吧</p>
-<h4 id="1-n中取m个球"><a href="#1-n中取m个球" class="headerlink" title="1.n中取m个球"></a>1.n中取m个球</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n&lt;m)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(n==m)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(m==<span class="number">0</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="2-求n个元素的全排列"><a href="#2-求n个元素的全排列" class="headerlink" title="2.求n个元素的全排列"></a>2.求n个元素的全排列</h4><h4 id="3-两个串中最大公共子序列的长度"><a href="#3-两个串中最大公共子序列的长度" class="headerlink" title="3.两个串中最大公共子序列的长度"></a>3.两个串中最大公共子序列的长度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int f(char* s1,char *s2)</span><br><span class="line">&#123;</span><br><span class="line">	if(strlen(s1)==0||strlen(s2)==0)</span><br><span class="line">	return 0</span><br><span class="line">	if(s1[0]==s2[0])</span><br><span class="line">	return 1+f(s1+1,s2+1);</span><br><span class="line">	else</span><br><span class="line">	return f(s1+1,s2)&gt;f(s1,s2+1)?</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="4-汉诺塔问题"><a href="#4-汉诺塔问题" class="headerlink" title="4.汉诺塔问题"></a>4.汉诺塔问题</h4><h4 id="5-超大的数字和小数的四舍五入"><a href="#5-超大的数字和小数的四舍五入" class="headerlink" title="5.超大的数字和小数的四舍五入"></a>5.超大的数字和小数的四舍五入</h4><h4 id="6-括号生成"><a href="#6-括号生成" class="headerlink" title="6.括号生成"></a>6.括号生成</h4><h4 id="7-数的组合问题。从1-2-…-n中取出m个数，将所有组合按照字典顺序列出。如n-3-m-2时，输出：12-13-23"><a href="#7-数的组合问题。从1-2-…-n中取出m个数，将所有组合按照字典顺序列出。如n-3-m-2时，输出：12-13-23" class="headerlink" title="7.数的组合问题。从1,2,…,n中取出m个数，将所有组合按照字典顺序列出。如n=3,m=2时，输出：12 13 23"></a>7.数的组合问题。从1,2,…,n中取出m个数，将所有组合按照字典顺序列出。如n=3,m=2时，输出：12 13 23</h4>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/08/stl-string/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Marinata">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marinata">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/08/stl-string/" class="post-title-link" itemprop="url">stl_string</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-08 10:33:03" itemprop="dateCreated datePublished" datetime="2019-03-08T10:33:03+08:00">2019-03-08</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-15 20:01:43" itemprop="dateModified" datetime="2019-03-15T20:01:43+08:00">2019-03-15</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/c/" itemprop="url" rel="index"><span itemprop="name">c++</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最近决定沉下心来放弃面向过程，彻底面向对象，刷一刷leetcode上的关于string的题来好好复习一下string</p>
-<p>string 的一些常用操作</p>
-<table>
-<thead>
-<tr>
-<th>.length()</th>
-<th>获取长度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>string a(str)</td>
-<td>char 数组str转换成string a</td>
-</tr>
-<tr>
-<td>transform(string.begin(),string.end(),string.begin(),::tolower);</td>
-<td>所有的字符小写</td>
-</tr>
-<tr>
-<td>transform(string.begin(),string.end(),string.begin(),::toupwer);</td>
-<td>所有字符大写</td>
-</tr>
-</tbody>
-</table>
-<p>—2019/3/15—-</p>
-<p>感觉最近碰到的题都涉及到string分割，比如给一个句子让把单词都提取出来的，遂写了一个函数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">split</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;  string_split(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; a,<span class="built_in">string</span> b,<span class="keyword">char</span> split_one)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;b.length()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;b.length();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">string</span> temp=<span class="string">""</span>;</span><br><span class="line">            <span class="keyword">while</span>(b[i]!=split_one&amp;&amp;i&lt;b.length())</span><br><span class="line">            &#123;</span><br><span class="line">                temp+=b[i];</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            a.push_back(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2226,7 +2140,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2257,7 +2171,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2302,7 +2218,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
